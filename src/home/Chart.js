@@ -30,22 +30,21 @@ import {AreaChart, Grid} from 'react-native-svg-charts';
 import * as shape from 'd3-shape';
 
 export const Chart = props => {
-
   return (
     <View
       style={{
         margin: 12,
         borderRadius: 6,
-        padding: 12,
-      }}>      
-        <AreaChart
-          style={{height: 200}}
-          data={props.data}
-          contentInset={{top: 30, bottom: 30}}
-          curve={shape.curveNatural}
-          svg={{fill: 'rgba(134, 65, 244, 0.8)'}}>
-          <Grid />
-        </AreaChart>
+        padding: 0,
+      }}>
+      <AreaChart
+        style={{height: 400}}
+        data={props.data}
+        contentInset={{top: 30, bottom: 30}}
+        curve={shape.curveNatural}
+        svg={{fill: 'rgba(134, 65, 244, 0.8)'}}>
+        <Grid />
+      </AreaChart>
     </View>
   );
 };
