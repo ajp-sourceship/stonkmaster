@@ -26,34 +26,34 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import globals from '../globals/Globals';
 import {iOSUIKit} from 'react-native-typography';
-import {LineChart} from 'react-native-chart-kit';
+import {AreaChart, Grid} from 'react-native-svg-charts';
+import * as shape from 'd3-shape';
+import {Chart} from './Chart';
+import {Selector} from './Selector';
 
+export const Dashboard = props => {
+  const [cryptoType, setCryptoType] = useState([]);
+  const [dataType, setDataType] = useState([]);
 
+  const btcdata = [ 50, 10, 40, 95, -4, -24, 85, 91, 35, 53, -53, 24, 50, -20, -80 ];
+  const ethData = [ -50, -10, -80, -65, -4, -8, 10, 40, 60, 80, 72, 76, 78, 83, 88 ];
+  const dogeData = [ 25, 30, 35, -4, -4, -20, 30, -12, -2, 40,80, 95, 78, 64, 88 ];
 
-export const Dashboard = props  => {
-  const [portfilio, setPortfolio] = useState([]);
-  const chrtData = {
-    labels: [
-      'January',
-      'February',
-      'March',
-      'April',
-      'May',
-      'June',
-    ],
-    datasets: [
-      {
-        data: [
-          Math.random() * 100,
-          Math.random() * 100,
-          Math.random() * 100,
-          Math.random() * 100,
-          Math.random() * 100,
-          Math.random() * 100,
-        ],
-      },
-    ],
-  }
+  const selectCrypto = selCrypto => {
+    setCryptoType(selCrypto);
+    switch(true)
+    {
+      case selCrypto === 'ETH':
+        setDataType(ethData)
+        break;
+      case selCrypto === 'BTC':
+        setDataType(btcdata)
+        break;
+      case selCrypto === 'DOGE':
+        setDataType(dogeData)
+        break;
+    }
+  };
 
   return (
     <View style={{flex: 1, backgroundColor: globals.Colors.Black}}>
@@ -64,42 +64,16 @@ export const Dashboard = props  => {
           borderRadius: 6,
           padding: 8,
         }}>
-        <Text style={iOSUIKit.title3EmphasizedWhite}>Stonk Master</Text>
-        <View
-          style={{
-            margin: 12,
-            borderRadius: 6,
-            padding: 12,
-          }}>
-          {portfilio.length > 0 ? null : (
-            <LineChart
-              data={chrtData}
-              width={Dimensions.get("window").width * .8} // from react-native
-              height={220}
-              yAxisLabel="$"
-              yAxisSuffix="k"
-              yAxisInterval={1} // optional, defaults to 1
-              chartConfig={{
-                decimalPlaces: 2, // optional, defaults to 2dp
-                color: (opacity = 1) => `rgba(255, 255, 255, ${.4})`,
-                labelColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
-                style: {
-                  borderRadius: 16,
-                  
-                },
-                propsForDots: {
-                  strokeWidth: '1',
-                },
-              }}
-              bezier
-              style={{
-                margin: 0,
-                borderRadius: 16,
-              }}
-            />
-          )}
-        </View>
+        <Text style={iOSUIKit.title3EmphasizedWhite}>
+          Stonk Master - {cryptoType}
+        </Text>
+        <Selector 
+          selectCrypto={selected => selectCrypto(selected)} 
+          />
+        <Chart 
+          data={dataType} 
+          />
       </View>
     </View>
   );
-}
+};
