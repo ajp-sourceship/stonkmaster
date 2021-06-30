@@ -95,7 +95,7 @@ export const Dashboard = props => {
           borderRadius: 6,
           padding: 8,
         }}>
-        <Text style={iOSUIKit.title3EmphasizedWhite}>
+        <Text testID='titleText' style={iOSUIKit.title3EmphasizedWhite}>
           Stonk Master - {cryptoType}
         </Text>
         <Selector selectCrypto={selected => selectCrypto(selected)} />

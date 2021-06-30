@@ -31,7 +31,7 @@ export const Selector = props => {
         flexDirection: 'row',
         marginVertical: 6,
       }}>
-      <TouchableOpacity onPress={() => props.selectCrypto('BTC')}>
+      <TouchableOpacity testID="btcButton" onPress={() => props.selectCrypto('BTC')}>
         <Text
           style={{
             color: 'white',
@@ -44,7 +44,7 @@ export const Selector = props => {
           BTC
         </Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => props.selectCrypto('ETH')}>
+      <TouchableOpacity testID="etgButton" onPress={() => props.selectCrypto('ETH')}>
         <Text
           style={{
             color: 'white',
@@ -57,7 +57,7 @@ export const Selector = props => {
           ETH
         </Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => props.selectCrypto('DOGE')}>
+      <TouchableOpacity testID="dogButton" onPress={() => props.selectCrypto('DOGE')}>
         <Text
           style={{
             color: 'white',

@@ -31,6 +31,7 @@ exports[`chart renders correctly 1`] = `
           "lineHeight": 25,
         }
       }
+      testID="titleText"
     >
       Stonk Master - 
       
@@ -59,6 +60,7 @@ exports[`chart renders correctly 1`] = `
             "opacity": 1,
           }
         }
+        testID="btcButton"
       >
         <Text
           style={
@@ -90,6 +92,7 @@ exports[`chart renders correctly 1`] = `
             "opacity": 1,
           }
         }
+        testID="etgButton"
       >
         <Text
           style={
@@ -121,6 +124,7 @@ exports[`chart renders correctly 1`] = `
             "opacity": 1,
           }
         }
+        testID="dogButton"
       >
         <Text
           style={
