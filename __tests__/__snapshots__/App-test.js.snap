@@ -1,0 +1,159 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`chart renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#121212",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#2c2c2c",
+        "borderRadius": 6,
+        "margin": 12,
+        "padding": 8,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "backgroundColor": "transparent",
+          "color": "#FFFFFF",
+          "fontFamily": "System",
+          "fontSize": 20,
+          "fontWeight": "600",
+          "letterSpacing": 0.75,
+          "lineHeight": 25,
+        }
+      }
+    >
+      Stonk Master - 
+      
+    </Text>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginVertical": 6,
+        }
+      }
+    >
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "borderColor": "green",
+              "borderRadius": 6,
+              "borderWidth": 2,
+              "color": "white",
+              "paddingHorizontal": 8,
+              "paddingVertical": 4,
+            }
+          }
+        >
+          BTC
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "borderColor": "green",
+              "borderRadius": 6,
+              "borderWidth": 2,
+              "color": "white",
+              "paddingHorizontal": 8,
+              "paddingVertical": 4,
+            }
+          }
+        >
+          ETH
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "borderColor": "green",
+              "borderRadius": 6,
+              "borderWidth": 2,
+              "color": "white",
+              "paddingHorizontal": 8,
+              "paddingVertical": 4,
+            }
+          }
+        >
+          DOGE
+        </Text>
+      </View>
+    </View>
+    <Text
+      style={
+        Object {
+          "backgroundColor": "transparent",
+          "color": "#FFFFFF",
+          "fontFamily": "System",
+          "fontSize": 20,
+          "fontWeight": "600",
+          "letterSpacing": 0.75,
+          "lineHeight": 25,
+          "textAlign": "center",
+        }
+      }
+    >
+      Press a Button to get started
+    </Text>
+  </View>
+</View>
+`;
