@@ -24,8 +24,6 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import globals from '../globals/Globals';
-import {iOSUIKit} from 'react-native-typography';
 import {AreaChart, Grid} from 'react-native-svg-charts';
 import * as shape from 'd3-shape';
 

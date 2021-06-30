@@ -24,7 +24,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import {Dashboard} from './src/home/Dashboard';
-
+console.disableYellowBox = true;
 const App  = () => {
   return (
     <View style={{flex:1}}>

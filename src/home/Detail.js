@@ -26,11 +26,11 @@ export const Detail = props => {
       <Text style={iOSUIKit.title3EmphasizedWhite}>{props.cryptoType}</Text>
       <Text style={{...iOSUIKit.title3EmphasizedWhite, margin:10}}>SIGNAL - {props.signal}</Text>
 
-      {props.orders.map(order => {
-          return <View style={{flexDirection:'row', justifyContent:'space-between'}}>
+      {props.orders.map((order, index) => {
+          return <View id={index} style={{flexDirection:'row', justifyContent:'space-between'}}>
           <Text style={iOSUIKit.title3EmphasizedWhite}>{order.type }</Text>
           <Text style={iOSUIKit.title3EmphasizedWhite}>{order.date}</Text>
-          <Text style={iOSUIKit.title3EmphasizedWhite}>{order.price}</Text>
+          <Text style={iOSUIKit.title3EmphasizedWhite}>{`$` + order.price}</Text>
           </View>
       })}
     </View>
